@@ -6,7 +6,7 @@ import Details from "~/components/Details";
 import {usePuterStore} from "~/Lib/puter";
 
 export const meta = () => ([
-    { title: 'Resumind | Review ' },
+    { title: 'RESLY | Review ' },
     { name: 'description', content: 'Detailed overview of your resume' },
 ])
 
