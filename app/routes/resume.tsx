@@ -43,7 +43,6 @@ const Resume = () => {
             setImageUrl(imageUrl);
 
             setFeedback(data.feedback);
-            console.log(data);
         }
 
         loadResume();

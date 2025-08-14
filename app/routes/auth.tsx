@@ -25,19 +25,19 @@ const Auth = () => {
                         <h1>Welcome</h1>
                         <h2>Log In to Continue Your Job Journey</h2>
                     </div>
-                    <div>
+                    <div className="justify-center items-center flex">
                         {isLoading ? (
-                            <button className="auth-button animate-pulse">
+                            <button className="auth-button animate-pulse w-fit h-fit">
                                 <p>Signing you in...</p>
                             </button>
                         ) : (
                             <>
                                 {auth.isAuthenticated ? (
-                                    <button className="auth-button" onClick={auth.signOut}>
+                                    <button className="auth-auth-button w-fit h-fit" onClick={auth.signOut}>
                                         <p>Log Out</p>
                                     </button>
                                 ) : (
-                                    <button className="auth-button" onClick={auth.signIn}>
+                                    <button className="auth-button w-fit h-fit" onClick={auth.signIn}>
                                         <p>Log In</p>
                                     </button>
                                 )}

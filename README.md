@@ -1,13 +1,13 @@
-## Resumind — AI Resume Analyser (ATS assistant)
+## Resumely — AI Resume Analyser (ATS assistant)
 
-Resumind analyzes a candidate's resume against a target job using AI and produces an ATS-friendly breakdown with scores, tips, and improvement suggestions. Users can upload a PDF resume, the app converts it to an image for preview, requests AI feedback, normalizes the response into a consistent `Feedback` schema, and presents results in a clean UI.
+Resumely analyzes a candidate's resume against a target job using AI and produces an ATS-friendly breakdown with scores, tips, and improvement suggestions. Users can upload a PDF resume, the app converts it to an image for preview, requests AI feedback, normalizes the response into a consistent `Feedback` schema, and presents results in a clean UI.
 
 ### Key Features
 - AI-powered resume analysis using Puter.ai chat (model: `claude-3-7-sonnet`).
 - PDF upload with inline preview (PDF converted to image for quick viewing).
 - Normalized, consistent feedback schema for display.
 - Persistent storage using Puter KV for resume analysis history.
-- Auth via Puter auth; quick profile menu with sign-in/out.
+- Auth via Puter auth; quick profile menu with sign-in/out and "Wipe All".
 - React Router 7 + TypeScript + TailwindCSS-based UI.
 
 ### Tech Stack
@@ -123,6 +123,10 @@ npm run build
 3. The app uploads your PDF, converts it to an image, sends it to AI, and stores the analysis.
 4. You are redirected to the Resume page to view the preview and detailed feedback.
 5. Return to Home to see your analyzed resumes list.
+
+### Data Management
+- Use the profile menu (top-right) to "Wipe All" which clears uploaded files and KV entries.
+- A legacy `Wipe` route (`/wipe`) also exists, but the profile menu action is the recommended path.
 
 ## Development Notes
 - Prompt: `constants/index.ts` defines `AIResponseFormat` and `prepareInstructions`.
