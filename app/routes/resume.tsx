@@ -68,6 +68,7 @@ const Resume = () => {
                                     title="resume"
                                 />
                             </a>
+                            
                         </div>
                     )}
                 </section>
